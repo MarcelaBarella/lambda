@@ -1,0 +1,2 @@
+
+select sum(t.valor_total * (c.percentual / 100)) as ganho_total from transacao t inner join contrato c on t.contrato_id = c.contrato_id inner join cliente c2 on c.cliente_id = c2.cliente_id group by c2.cliente_id
